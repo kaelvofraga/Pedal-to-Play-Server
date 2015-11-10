@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# Some hosts may require you to use the `RewriteBase` directive.
+# If you need to use the `RewriteBase` directive, it should be the
+# absolute physical path to the directory that contains this htaccess file.
+#
+# RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
+SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+RewriteRule ^edu/ifrs/canoas/pedal2play/resources/dbconfig.ini$ - [F]
+RewriteRule ^edu/ifrs/canoas/pedal2play/resources/level_conf.json$ - [F]
