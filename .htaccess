@@ -12,3 +12,4 @@ RewriteRule ^ index.php [QSA,L]
 SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
 RewriteRule ^edu/ifrs/canoas/pedal2play/resources/dbconfig.ini$ - [F]
 RewriteRule ^edu/ifrs/canoas/pedal2play/resources/level_conf.json$ - [F]
+Options -Indexes
